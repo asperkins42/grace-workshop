@@ -1,0 +1,14 @@
+config,None,data_width,306
+config,None,depth,1024
+config,None,samplerate,1000000000000
+signal,0,soc_basesoc_vexriscv_aw_valid,1
+signal,0,soc_basesoc_vexriscv_aw_ready,1
+signal,0,soc_basesoc_vexriscv_aw_payload_addr,33
+signal,0,soc_basesoc_vexriscv_aw_payload_len,8
+signal,0,soc_basesoc_vexriscv_w_valid,1
+signal,0,soc_basesoc_vexriscv_w_ready,1
+signal,0,soc_basesoc_vexriscv_w_payload_data,256
+signal,0,soc_basesoc_vexriscv_w_last,1
+signal,0,soc_basesoc_vexriscv_b_valid,1
+signal,0,soc_basesoc_vexriscv_b_ready,1
+signal,0,soc_basesoc_vexriscv_b_payload_resp,2

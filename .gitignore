@@ -1,0 +1,94 @@
+# Vivado/XSim caches & temp
+.Xil/
+*.jou
+*.log
+*.pb
+*.wdb
+*.wdf
+*.rpt
+*.xml
+*.dcp
+*.dcp.lock
+*.tcl.history
+*.vdi
+*.dcp
+*.sdb
+*.ini
+*.db
+*.rlx
+*.reloc
+*.xdbg
+*.xdbg*
+xsim.dir/
+xelab.pb
+xvlog.pb
+xsim.ini
+webtalk*/
+**/webtalk*/
+**/usage_statistics_*.wdm
+
+# Vivado project dirs
+project_*/
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/sim_*/*
+*.srcs/sources_1/ip/*
+
+# General
+.vscode/
+.DS_Store
+*~
+
+# Build outputs (regenerate with make)
+/soc/build/
+/proj/*/build/
+obj_dir/
+__pycache__/
+*.pyc
+/proj_menu*.bc
+/proj_menu*.o
+vivado_pid*.str
+*.bak-pre-*
+
+# Local environments and toolchains (see BUILDING.md)
+/.env
+/.venv/
+/amaranth/
+/riscv64-unknown-elf-gcc-*/
+
+# Run logs under proj/*/logs/ are evidence and are tracked, despite *.log above.
+!/proj/*/logs/**
+# Over GitHub's 100 MB limit; the gzipped copy beside it is tracked.
+/proj/*/logs/session_20260822_164049.log
+
+# Downloaded literature and snapshot archives
+/proj/*/literature/
+/proj/*/revision/literature_text/
+/proj/*.zip
+/proj/*.tar.gz
+/proj/thesis/*.zip
+
+# Verilator and host-test build output from the revision checks (rebuildable)
+/proj/*/revision/dma_validation/rtl/
+/proj/*/revision/ntt_packed_oracle/rtl/
+/proj/*/revision/rtl_packed_checks/*/
+/proj/*/revision/rtl_packed_final/cfu_integration/
+/proj/*/revision/rtl_packed_final/oracle/rtl/
+/proj/**/*.o
+/proj/**/*.a
+/proj/**/*.d
+/proj/**/*.gch
+# Prebuilt clang objects consumed by the OFFLOAD_*_O Makefile overrides
+!/proj/*/offload_*_clang.o
+# Build and run logs from the revision checks are validation evidence
+!/proj/*/revision/**/*.log
+
+# Editor lock files
+.#*
+
+# Downloaded by scripts/setup
+/third_party/renode/
