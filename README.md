@@ -12,12 +12,12 @@ Quick start on milan3, in fish, with RISC-V GCC 10.1 on your PATH:
 
 ```sh
 bass module load vitis/2020.2          # Vivado 2020.2
-git clone https://code.ornl.gov/fairbanks/pim/grace-pim-workshop.git
-cd grace-pim-workshop
+git clone https://code.ornl.gov/fairbanks/pim/grace-workshop.git
+cd grace-workshop
 ./scripts/setup                        # submodules and local tools
 cd proj/example_grace_gemm
-make prog TTY=/dev/ttyUSB2             # first run builds the bitstream (~12 min)
-make load TTY=/dev/ttyUSB2             # at litex>, press Enter or type reboot
+make prog TARGET=xilinx_alveo_u280 USE_VIVADO=1                      # first run builds the bitstream (~12 min)
+make load TARGET=xilinx_alveo_u280 BUILD_JOBS=4 TTY=/dev/ttyUSB2     # at litex>, press Enter or type reboot
 ```
 
 The U280 is shared: check `squeue -p fpgarun` and take it through Slurm before
